@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
 #include "ShoppingCart.h"
 
 void PrintMenu() {
@@ -31,7 +30,6 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
 		getline(cin, itemName);
 		cout << endl;
 
-
 		cout << "Enter the item description:";
 		getline(cin, itemDescription);
 		cout << endl;
@@ -39,7 +37,6 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
 		cout << "Enter the item price:";
 		cin >> itemPrice;
 		cout << endl;
-
 
 		cout << "Enter the item quantity:";
 		cin >> itemQuantity;
@@ -116,8 +113,6 @@ int main() {
 	cout << "Today's date: " << cart.GetDate() << endl;
 	cout << endl;
 
-	// a d c i o q
-
 	do {
 		PrintMenu();
 		do {
@@ -125,11 +120,8 @@ int main() {
 			cin >> option;
 			cout << endl;
 		} while ((option != 'a') && (option != 'd') && (option != 'c') && (option != 'i') && (option != 'o') && (option != 'q'));
-
-
 		ExecuteMenu(option, cart);
 	} while (option != 'q');
-
 
 	return 0;
 }
